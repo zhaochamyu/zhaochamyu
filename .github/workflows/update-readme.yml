@@ -1,0 +1,66 @@
+name: Update GitHub Profile README
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Every day at midnight UTC
+  workflow_dispatch:       # Manual trigger anytime
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout profile repo
+        uses: actions/checkout@v4
+
+      - name: Fetch latest GitHub stats
+        id: stats
+        run: |
+          STARS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/users/zhaochamyu" | jq -r '.public_repos // 0')
+          FOLLOWERS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/users/zhaochamyu" | jq -r '.followers // 0')
+          echo "repos=$STARS" >> $GITHUB_OUTPUT
+          echo "followers=$FOLLOWERS" >> $GITHUB_OUTPUT
+
+      - name: Fetch latest repos activity
+        id: activity
+        run: |
+          REPOS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/users/zhaochamyu/repos?sort=updated&per_page=3" \
+            | jq -r '.[] | "- [\(.name)](https://github.com/zhaochamyu/\(.name)) — \(.description // "No description")"')
+          echo "repos_list<<EOF" >> $GITHUB_OUTPUT
+          echo "$REPOS" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Update README with timestamp and latest activity
+        run: |
+          DATE=$(date -u '+%B %d, %Y at %H:%M UTC')
+
+          # Update the last-updated line in README
+          if grep -q "<!-- LAST_UPDATED -->" README.md; then
+            sed -i "s|<!-- LAST_UPDATED -->.*<!-- /LAST_UPDATED -->|<!-- LAST_UPDATED -->🕐 Last updated: $DATE<!-- /LAST_UPDATED -->|g" README.md
+          else
+            echo "" >> README.md
+            echo "<!-- LAST_UPDATED -->🕐 Last updated: $DATE<!-- /LAST_UPDATED -->" >> README.md
+          fi
+
+          # Update recent repos section
+          if grep -q "<!-- RECENT_REPOS -->" README.md; then
+            ESCAPED=$(echo "${{ steps.activity.outputs.repos_list }}" | sed 's/[&/\]/\\&/g' | tr '\n' '|')
+            perl -i -0pe "s|<!-- RECENT_REPOS -->.*<!-- /RECENT_REPOS -->|<!-- RECENT_REPOS -->\n$ESCAPED\n<!-- /RECENT_REPOS -->|s" README.md || true
+          fi
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add README.md
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-update: profile stats refreshed $(date -u '+%Y-%m-%d')"
+            git push
+          fi
