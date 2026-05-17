@@ -1,17 +1,3 @@
-<div align="center">
-
-# こんにちは (Konnichiwa) 👋 I'm zhaochamyu
-
-### 🌸 Web3 Builder · Blockchain Developer · Japanese Culture Enthusiast
-
-<p>
-  <img src="https://komarev.com/ghpvc/?username=zhaochamyu&label=Profile%20views&color=blueviolet&style=for-the-badge" alt="Profile Views">
-  <img src="https://img.shields.io/github/followers/zhaochamyu?label=Followers&style=for-the-badge&color=blue" alt="Followers">
-  <img src="https://img.shields.io/github/stars/zhaochamyu?label=Total%20Stars&style=for-the-badge&color=yellow" alt="Stars">
-</p>
-
-</div>
-
 ---
 
 ## 🚀 Featured Project
@@ -66,6 +52,48 @@
 
 ---
 
+## 🏆 GitHub Trophies
+
+<div align="center">
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=zhaochamyu&theme=tokyonight&no-frame=true&row=1&column=6)](https://github.com/ryo-ma/github-profile-trophy)
+
+</div>
+
+---
+
+## ⭐ Support My Work
+
+If you like what I'm building, consider starring my repos — it means a lot! 🙏
+
+[![Star JapaneseOnchain](https://img.shields.io/badge/⭐%20Star-JapaneseOnchain-yellow?style=for-the-badge&logo=github)](https://github.com/zhaochamyu/JapaneseOnchain)
+
+---
+
+<div align="center">
+
+![Snake animation](https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg)
+
+</div>
+
+---
+
+<div align="center">
+
+# こんにちは (Konnichiwa) 👋 I'm zhaochamyu
+
+### 🌸 Web3 Builder · Blockchain Developer · Japanese Culture Enthusiast
+
+<p>
+  <img src="https://komarev.com/ghpvc/?username=zhaochamyu&label=Profile%20views&color=blueviolet&style=for-the-badge" alt="Profile Views">
+  <img src="https://img.shields.io/github/followers/zhaochamyu?label=Followers&style=for-the-badge&color=blue" alt="Followers">
+  <img src="https://img.shields.io/github/stars/zhaochamyu?label=Total%20Stars&style=for-the-badge&color=yellow" alt="Stars">
+</p>
+
+</div>
+
+---
+
 ## 🌸 About Me
 
 ```javascript
@@ -77,16 +105,6 @@ const zhaochamyu = {
   website:     "http://japaneseonchain.xyz",
 };
 ```
-
----
-
-## 🏆 GitHub Trophies
-
-<div align="center">
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=zhaochamyu&theme=tokyonight&no-frame=true&row=1&column=6)](https://github.com/ryo-ma/github-profile-trophy)
-
-</div>
 
 ---
 
@@ -103,25 +121,9 @@ const zhaochamyu = {
 
 ---
 
-## ⭐ Support My Work
-
-If you like what I'm building, consider starring my repos — it means a lot! 🙏
-
-[![Star JapaneseOnchain](https://img.shields.io/badge/⭐%20Star-JapaneseOnchain-yellow?style=for-the-badge&logo=github)](https://github.com/zhaochamyu/JapaneseOnchain)
-
----
-
 <div align="center">
 
 *「伝統と革新の融合」— Fusion of tradition and innovation* 🌸
-
-![Snake animation](https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg)
-
-</div>
-
----
-
-<div align="center">
 
 <!-- LAST_UPDATED -->🕐 Last updated: automatically every day via GitHub Actions<!-- /LAST_UPDATED -->
 
