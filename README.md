@@ -26,6 +26,14 @@
 
 ---
 
+## 📌 Recent Activity
+
+<!-- RECENT_REPOS -->
+- [JapaneseOnchain](https://github.com/zhaochamyu/JapaneseOnchain) — JapaneseOnchain project
+<!-- /RECENT_REPOS -->
+
+---
+
 ## 🛠️ Tech Stack
 
 <p>
@@ -108,5 +116,15 @@ If you like what I'm building, consider starring my repos — it means a lot! �
 *「伝統と革新の融合」— Fusion of tradition and innovation* 🌸
 
 ![Snake animation](https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg)
+
+</div>
+
+---
+
+<div align="center">
+
+<!-- LAST_UPDATED -->🕐 Last updated: automatically every day via GitHub Actions<!-- /LAST_UPDATED -->
+
+[![Update Profile README](https://github.com/zhaochamyu/zhaochamyu/actions/workflows/update-readme.yml/badge.svg)](https://github.com/zhaochamyu/zhaochamyu/actions/workflows/update-readme.yml)
 
 </div>
